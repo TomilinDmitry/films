@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 275px;
+  width: 100%;
+
+  box-shadow: 2px 2px 12px 0px #6800c986;
+  margin-right: 12px;
+  .container {
+    padding: 12px;
+    display: flex;
+    background-color: #21201e;
+    max-height: 2000px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 58px;
+    flex-direction: column;
+    section {
+      display: flex;
+      max-height: 50px;
+      align-items: center;
+      gap: 24px;
+      .image {
+        width: 34px;
+        height: 34px;
+      }
+      .title {
+        color: white;
+      }
+    }
+    .navigation {
+      max-height: 730px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        color: white;
+        gap: 35px;
+        li {
+          display: flex;
+          gap: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
