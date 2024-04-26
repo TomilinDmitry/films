@@ -1,0 +1,53 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  max-height: 515px;
+  height: 100%;
+  max-width: 250px;
+  width: 100%;
+  margin-bottom: 10px;
+  .poster {
+    position: relative;
+    .posterImage {
+      max-width: 250px;
+      width: 100%;
+      max-height: 370px;
+      height: 100%;
+    }
+    .favourite {
+      position: absolute;
+      right: 15px;
+      top: 16px;
+    }
+  }
+  .descriptionBlock {
+    .description {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .year {
+        color: #9ca3af;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+      .rating {
+        display: flex;
+        justify-content: right;
+        gap: 8px;
+        align-items: center;
+        word-spacing: 8px;
+        letter-spacing: 4px;
+      }
+      .genre {
+        @extend .year;
+      }
+    }
+  }
+}
