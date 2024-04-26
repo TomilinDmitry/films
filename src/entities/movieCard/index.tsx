@@ -11,10 +11,11 @@ export const MovieCard = ({
   description,
   type,
   year,
-  releaseYears,
   rating,
   movieLength,
   poster,
+  countries,
+  genres,
 }: TMovie) => {
   const [active, setActive] = useState<boolean>(false);
   return (
@@ -37,17 +38,25 @@ export const MovieCard = ({
             />
           )}
 
-          <img src={poster.url} alt='poster' className={style.posterImage} />
+          <img
+            src={poster.url}
+            alt='poster'
+            className={style.posterImage}
+          />
         </div>
         <div className={style.descriptionBlock}>
           <section className={style.description}>
-            <span className={style.year}>USA,2018</span>
+            <span className={style.year}>
+              {countries[0].name},{year}
+            </span>
             <h1 className={style.title}>{name}</h1>
             <span className={style.rating}>
               <img src={star} alt='star' />
               {rating.kp.toFixed(1)} / 10
             </span>
-            <span className={style.genre}>{type}</span>
+            <span className={style.genre}>
+              {genres[0].name}, {genres[1].name}
+            </span>
           </section>
         </div>
       </div>

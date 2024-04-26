@@ -1,5 +1,5 @@
 export type TMovie = {
-  releaseYears: any;
+  releaseYears?: any;
   id: number;
   name: string;
   type: string;
@@ -10,8 +10,21 @@ export type TMovie = {
     imdb: number;
     filmCritics: number;
     russianFilmCritics: number;
-    await?: any; // Optional property
+    await?: any; 
   };
+  countries: [
+    {
+      name: string;
+    },
+  ];
+  genres: [
+    {
+        "name": "драма"
+    },
+    {
+        "name": "комедия"
+    }
+],
   movieLength: number;
   poster: {
     url: string;

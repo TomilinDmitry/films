@@ -10,8 +10,8 @@ export const MainPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const url =
-        "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=10&selectFields=id&selectFields=name&selectFields=description&selectFields=shortDescription&selectFields=releaseYears&selectFields=rating&selectFields=movieLength&selectFields=genres&selectFields=countries";
-      const apiKey = "WKE87JD-4D441GJ-MPRMZ0Q-6DC5G21";
+        "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8";
+      const apiKey = "5MJ05CQ-E6VMB9V-QFJ0DTC-78X7Z6R";
 
       try {
         const response = await fetch(url, {
@@ -22,9 +22,9 @@ export const MainPage = () => {
           },
         });
 
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+        // if (!response.ok) {
+        //   throw new Error("Network response was not ok");
+        // }
 
         const data: TApiResponse = await response.json();
         setMovies(data.docs);
@@ -43,11 +43,13 @@ export const MainPage = () => {
     <div className={style.wrapper}>
       <HeaderMainPage />
       <div className={style.main}>
-        <h1>Trending</h1>
+        <h1>Popular all the time</h1>
         <div className={style.cardBlock}>
           {movies.map((movie, index) => (
             <MovieCard
-              key={index} // Важно указать уникальный ключ для каждого MovieCard
+              countries={movie.countries}
+              genres={movie.genres}
+              key={index}
               name={movie.name}
               description={movie.description}
               type={movie.type}
@@ -56,7 +58,7 @@ export const MainPage = () => {
               rating={movie.rating}
               movieLength={movie.movieLength}
               poster={movie.poster}
-              id={0}
+              id={index}
             />
           ))}
         </div>

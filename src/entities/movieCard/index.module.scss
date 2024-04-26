@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
   color: white;
+  z-index: 1;
 }
 .container {
   display: flex;
@@ -22,6 +23,7 @@ a {
       position: absolute;
       right: 15px;
       top: 16px;
+      z-index: 2;
     }
   }
   .descriptionBlock {
