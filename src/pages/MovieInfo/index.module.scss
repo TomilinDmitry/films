@@ -1,0 +1,173 @@
+.wrapper {
+  width: 100%;
+  z-index: 1;
+
+  .container {
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .navigation {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 16px 0;
+      z-index: 2;
+      .navigationElements {
+        display: flex;
+        list-style: none;
+        .aboutFilm {
+          cursor: pointer;
+          padding: 10px 20px;
+          border-radius: 0.8rem;
+          background-color: rgba(31, 31, 31, 0.95);
+          color: white;
+          border: none;
+          outline: none;
+          font-size: 1.5rem;
+        }
+        .details {
+          @extend .aboutFilm;
+          background-color: transparent;
+          color: #fff9;
+        }
+      }
+    }
+    .mainBlock {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 60px;
+      z-index: 2;
+      .logo {
+        margin-bottom: 16px;
+        h1 {
+          font-size: 150px;
+        }
+      }
+      .logoDetails {
+        h1 {
+          font-size: 110px;
+        }
+      }
+      .info {
+        display: flex;
+        font-size: 1.8rem;
+        gap: 12px;
+        margin-bottom: 20px;
+        .rating {
+          color: #3bb33b;
+        }
+        .filmDescription {
+          color: #fff9;
+        }
+      }
+      .infoDetails {
+        @extend .info;
+        gap: 6px;
+        flex-direction: column;
+        .rating {
+          font-size: 2.2rem;
+        }
+        .filmVotes {
+          color: #fff9;
+        }
+      }
+
+      .description {
+        font-size: 2.2rem;
+        max-width: 64rem;
+        margin-bottom: 32px;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 8;
+        display: -webkit-box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+      }
+      .descriptionBlock {
+        display: flex;
+        justify-content: space-between;
+        .actors {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          gap: 22px;
+          .actorsList {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 12px;
+            font-size: 18px;
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 12px;
+        .notViewed {
+          font-weight: 500;
+          padding: 0px 22px;
+          height: 52px;
+          border-radius: 0.8rem;
+          border: none;
+          outline: none;
+          background-color: #c0c0c0;
+          color: white;
+          font-size: 1.6rem;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .viewed {
+          @extend .notViewed;
+          background-color: #7900c2;
+        }
+        .favourite {
+          @extend .notViewed;
+          background-color: #7900c2;
+        }
+      }
+    }
+  }
+  .background {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    .layout {
+      position: absolute;
+      top: 0;
+      width: 85%;
+      height: 100%;
+      opacity: 0.3;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 32%,
+        rgb(62, 62, 62) 85%
+      );
+      z-index: 1;
+    }
+    img {
+      max-width: calc(57.6rem * 16 / 9);
+      width: 100%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      height: 57rem;
+    }
+  }
+  .backgroundDetails {
+    max-width: 85.5%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 32%,
+      rgb(62, 62, 62) 85%
+    );
+  }
+}

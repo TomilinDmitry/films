@@ -3,7 +3,6 @@
   flex-direction: column;
   max-width: 275px;
   width: 100%;
-
   box-shadow: 2px 2px 12px 0px #6800c986;
   margin-right: 12px;
   .container {
@@ -14,6 +13,7 @@
     height: 100%;
     width: 100%;
     align-items: center;
+    font-size: 24px;
     gap: 58px;
     flex-direction: column;
     section {
@@ -42,9 +42,11 @@
         color: white;
         gap: 35px;
         li {
-          display: flex;
-          gap: 12px;
-          cursor: pointer;
+          a{
+            display: flex;
+            gap: 12px;
+            cursor: pointer;
+          }
         }
       }
     }

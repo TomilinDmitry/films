@@ -1,39 +1,46 @@
 export type TMovie = {
   releaseYears?: any;
   id: number;
-  name: string;
+  name?: string;
   type: string;
-  year: number;
-  description: string;
-  rating: {
+  year?: number;
+  description?: string;
+  shortDescription?: string;
+  rating?: {
     kp: number;
-    imdb: number;
-    filmCritics: number;
-    russianFilmCritics: number;
-    await?: any; 
   };
-  countries: [
+  votes?: {
+    kp: number;
+  };
+  ageRating?: number;
+  countries?: [
     {
-      name: string;
+      name: "комедия" | "драма" | "детектив" | "ужасы";
     },
   ];
-  genres: [
-    {
-        "name": "драма"
-    },
-    {
-        "name": "комедия"
-    }
-],
-  movieLength: number;
+  genres?: [{ name: string }];
+  movieLength?: number;
   poster: {
     url: string;
-    previewUrl: string;
+  };
+  backdrop?: {
+    url: string;
+  };
+  persons?: [{ name: string; profession: string }];
+  premiere?: {
+    world: string;
   };
 };
 
 export type TApiResponse = {
   docs: TMovie[];
+  total: number;
+  limit: number;
+  page: number;
+  pages: number;
+};
+export type TApiResponseOneMovie = {
+  docs: TMovie;
   total: number;
   limit: number;
   page: number;

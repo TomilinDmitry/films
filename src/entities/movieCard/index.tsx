@@ -9,57 +9,68 @@ import { TMovie } from "../../app/types/types";
 export const MovieCard = ({
   name,
   description,
-  type,
-  year,
+  premiere,
   rating,
-  movieLength,
   poster,
   countries,
   genres,
+  id,
 }: TMovie) => {
+  const genresName = genres!.map((genre) => genre.name);
   const [active, setActive] = useState<boolean>(false);
+  console.log(premiere?.world)
   return (
-    <Link to='/cardInfo'>
-      <div className={style.container}>
-        <div className={style.poster}>
-          {active ? (
-            <img
-              src={favoriteAct}
-              alt=''
-              className={style.favourite}
-              onClick={() => setActive(!active)}
-            />
-          ) : (
-            <img
-              src={favoriteDef}
-              alt=''
-              className={style.favourite}
-              onClick={() => setActive(!active)}
-            />
-          )}
-
+    <div className={style.container}>
+      <div className={style.poster}>
+        {active ? (
           <img
-            src={poster.url}
-            alt='poster'
-            className={style.posterImage}
+            src={favoriteAct}
+            alt=''
+            className={style.favourite}
+            onClick={() => setActive(!active)}
           />
-        </div>
+        ) : (
+          <img
+            src={favoriteDef}
+            alt=''
+            className={style.favourite}
+            onClick={() => setActive(!active)}
+          />
+        )}
+
+        <img
+          src={poster.url}
+          alt='poster'
+          className={style.posterImage}
+        />
+      </div>
+      <Link to={`/movieInfo/${id}`}>
         <div className={style.descriptionBlock}>
           <section className={style.description}>
-            <span className={style.year}>
-              {countries[0].name},{year}
-            </span>
-            <h1 className={style.title}>{name}</h1>
-            <span className={style.rating}>
-              <img src={star} alt='star' />
-              {rating.kp.toFixed(1)} / 10
-            </span>
-            <span className={style.genre}>
-              {genres[0].name}, {genres[1].name}
-            </span>
+            <div>
+              <span className={style.year}>
+                {countries![0].name}
+              </span>
+              <h1 className={style.title}>{name}</h1>
+            </div>
+            <div className={style.footerCard}>
+              {rating && rating.kp !== 0 && (
+                <span className={style.rating}>
+                  <img src={star} alt='star' />
+                  `${rating.kp.toFixed(1)} / 10`
+                </span>
+              )}
+              {genresName[0] && genresName[1] ? (
+                <span className={style.genre}>
+                  {genresName[0]}, {genresName[1]}{" "}
+                </span>
+              ) : (
+                <span className={style.genre}>{genresName[0]} </span>
+              )}
+            </div>
           </section>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
