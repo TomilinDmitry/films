@@ -1,0 +1,11 @@
+export const popularMovieApi =
+  "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=10&notNullFields=id&notNullFields=name&notNullFields=year&notNullFields=rating.kp&notNullFields=movieLength&notNullFields=genres.name&notNullFields=countries.name&notNullFields=poster.url&sortField=rating.kp&sortField=genres.name&sortType=-1&sortType=-1&genres.name=%D0%B4%D1%80%D0%B0%D0%BC%D0%B0&genres.name=%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F&genres.name=%D1%83%D0%B6%D0%B0%D1%81%D1%8B&genres.name=%D0%B4%D0%B5%D1%82%D0%B5%D0%BA%D1%82%D0%B8%D0%B2&type=movie&type=!tv-series&type=!cartoon&";
+export const headerMovieApi =
+  "https://api.kinopoisk.dev/v1.4/movie?&limit=100&year=2024&notNullFields=shortDescription";
+export const allPopularMovie =
+  "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=100&selectFields=id&selectFields=name&selectFields=shortDescription&selectFields=year&selectFields=rating&selectFields=movieLength&selectFields=genres&selectFields=countries&selectFields=poster&notNullFields=id&notNullFields=name&notNullFields=year&notNullFields=rating.kp&notNullFields=movieLength&notNullFields=genres.name&notNullFields=countries.name&notNullFields=poster.url&sortField=rating.kp&sortField=genres.name&sortType=-1&sortType=-1&genres.name=%D0%B4%D1%80%D0%B0%D0%BC%D0%B0&genres.name=%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F&genres.name=%D1%83%D0%B6%D0%B0%D1%81%D1%8B&genres.name=%D0%B4%D0%B5%D1%82%D0%B5%D0%BA%D1%82%D0%B8%D0%B2&type=movie&type=!tv-series&type=!cartoon&";
+export const cinemaSoonMovie =
+  "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=10&selectFields=&notNullFields=id&notNullFields=name&notNullFields=year&notNullFields=genres.name&notNullFields=countries.name&notNullFields=poster.url&notNullFields=premiere.world&sortField=premiere.world&sortType=1&type=movie&status=filming&status=announced&status=completed";
+export const topMovie =
+  "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=10&notNullFields=poster.url&notNullFields=top10&sortField=top10&sortType=1";
+export const trandingMovie = "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=100&notNullFields=name&notNullFields=rating.kp&notNullFields=genres.name&notNullFields=countries.name&notNullFields=poster.url&sortField=rating.kp&sortType=-1&year=2022-2024&rating.kp=7-10&type=movie"

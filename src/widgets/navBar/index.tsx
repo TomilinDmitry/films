@@ -5,8 +5,6 @@ import film from "../../assets/icons/film.svg";
 import favourite from "../../assets/icons/heart.svg";
 import trend from "../../assets/icons/trending-up.svg";
 import community from "../../assets/icons/users.svg";
-import logout from "../../assets/icons/log-out.svg";
-import settings from "../../assets/icons/sliders.svg";
 import social from "../../assets/icons/message-circle.svg";
 import { Link } from "react-router-dom";
 
@@ -48,28 +46,18 @@ export const NavBar = () => {
           </ul>
           <ul className={style.list}>
             <li>
-              <Link to='/community'>
+            <Link to='https://t.me/dftomilin'>
                 <img src={community} alt='communityIcon' />
                 Community
               </Link>
             </li>
             <li>
-              <Link to='/https://t.me/dftomilin'>
+              <Link to='https://t.me/dftomilin'>
                 <img src={social} alt='socialIcon' />
                 Social
               </Link>
             </li>
           </ul>
-          {/* <ul className={style.list}>
-            <li>
-              <img src={settings} alt='homeIcon' />
-              Settings
-            </li>
-            <li>
-              <img src={logout} alt='homeIcon' />
-              Logout
-            </li>
-          </ul> */}
         </nav>
       </div>
     </div>

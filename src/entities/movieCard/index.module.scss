@@ -23,6 +23,19 @@ a {
       z-index: 2;
       cursor: pointer;
     }
+    .position {
+      position: absolute;
+      left: 10px;
+      top: 6px;
+      font-size: 48px;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 0, 0, 1) 24%,
+        rgba(255, 128, 0, 0.7371323529411764) 79%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
   .descriptionBlock {
     height: 200px;

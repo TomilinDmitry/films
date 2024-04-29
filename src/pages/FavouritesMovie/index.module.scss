@@ -1,7 +1,19 @@
 .wrapper {
   width: 100%;
   display: flex;
-  justify-content: center;
   padding: 40px;
   gap: 40px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    gap: 24px;
+    .cardBlock {
+      display: flex;
+      max-height: 100%;
+      height: 100%;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+  }
 }

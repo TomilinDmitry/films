@@ -9,13 +9,14 @@
     padding: 12px;
     display: flex;
     background-color: #21201e;
-    max-height: 2000px;
     height: 100%;
-    width: 100%;
+    width: 265px;
+
     align-items: center;
     font-size: 24px;
     gap: 58px;
     flex-direction: column;
+    position: fixed;
     section {
       display: flex;
       max-height: 50px;
@@ -42,7 +43,7 @@
         color: white;
         gap: 35px;
         li {
-          a{
+          a {
             display: flex;
             gap: 12px;
             cursor: pointer;

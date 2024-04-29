@@ -41,13 +41,17 @@
       z-index: 2;
       .logo {
         margin-bottom: 16px;
+        img{
+          width: 600px;
+        }
         h1 {
-          font-size: 150px;
+          font-size: 110px;
+          line-height: 150px;
         }
       }
       .logoDetails {
         h1 {
-          font-size: 110px;
+          font-size: 80px;
         }
       }
       .info {
@@ -60,6 +64,31 @@
         }
         .filmDescription {
           color: #fff9;
+        }
+      }
+      .topPostionBlock {
+        display: flex;
+        align-items: center;
+        img {
+          width: 2.1rem;
+          height: 2.4rem;
+        }
+        .nameTop {
+          font-size: 1.8rem;
+          margin-right: 12px;
+          color: #e2bce8;
+        }
+        .positionTop {
+          font-size: 1.3rem;
+          background: #e2bce8;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          font-weight: 600;
         }
       }
       .infoDetails {
@@ -77,11 +106,12 @@
       .description {
         font-size: 2.2rem;
         max-width: 64rem;
+        height: 200px;
         margin-bottom: 32px;
         -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         overflow: hidden;
-        -webkit-line-clamp: 8;
+        -webkit-line-clamp: 7;
         display: -webkit-box;
         word-wrap: break-word;
         -webkit-box-orient: vertical;
@@ -119,14 +149,20 @@
           display: flex;
           align-items: center;
           gap: 8px;
+          cursor: pointer;
         }
         .viewed {
           @extend .notViewed;
-          background-color: #7900c2;
+          background-color: #00c278;
         }
         .favourite {
           @extend .notViewed;
           background-color: #7900c2;
+        }
+        .trailer {
+          @extend .notViewed;
+          background-color: #ffffff;
+          color: red;
         }
       }
     }
@@ -138,7 +174,7 @@
     .layout {
       position: absolute;
       top: 0;
-      width: 85%;
+      width: 85.5%;
       height: 100%;
       opacity: 0.3;
       background: linear-gradient(
@@ -149,12 +185,12 @@
       z-index: 1;
     }
     img {
-      max-width: calc(57.6rem * 16 / 9);
+      max-width: calc(57.8rem * 16 / 9);
       width: 100%;
       position: absolute;
       z-index: 0;
       top: 0;
-      height: 57rem;
+      height: 57.3rem;
     }
   }
   .backgroundDetails {

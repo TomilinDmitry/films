@@ -1,30 +1,34 @@
 import React, { useEffect} from "react";
-import style from "./style.module.scss";
-import { MovieCard } from "../../entities/movieCard";
-import { getAllPopularMovie } from "../../app/api";
+import style from "./index.module.scss";
+import { MovieCard } from "../movieCard";
 import { useDispatch, useSelector } from "../../app/types/hooks";
-export const AllPopularMovie = () => {
+import { getTopMovie } from "../../app/api";
+export const TopBlock = () => {
   const dispatch = useDispatch();
-  const { allPopularMovie } = useSelector((store) => store.main);
+  const { topMovie } = useSelector((store) => store.main);
+
   useEffect(() => {
-    dispatch(getAllPopularMovie());
+    dispatch(getTopMovie())
   }, [dispatch]);
 
   return (
-    <div className={style.main}>
+    <div>
+      {" "}
       <section className={style.title}>
-        <h1>Top 100 rated films</h1>
+        <h1>Top 10 of the month</h1>
       </section>
       <div className={style.cardBlock}>
-        {allPopularMovie.map((movie, index) => (
+        {topMovie.map((movie, index) => (
           <MovieCard
             countries={movie.countries}
             genres={movie.genres}
             key={index}
+            position={index}
             name={movie.name}
+            year={movie.year}
             description={movie.description}
             type={movie.type}
-            year={movie.year}
+            premiere={movie.premiere}
             releaseYears={movie.releaseYears}
             rating={movie.rating}
             movieLength={movie.movieLength}
