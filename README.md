@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+# <a href=https://tomilindmitry.github.io/films style="color: white;">Watch.Movie</a>
+## Инструкция по запуску и приложению:
+1. *npm i* - для установки зависимостей
+2. *npm run dev* - для запуска проекта.
+3. Для запросов использовал <a href = https://api.kinopoisk.dev/documentation style="color: white;">Api </a>
+4. Карточка фильма открывается по нажатию под постером фильма.
+5. При нажатии на иконку на постере,фильм добавляется в избранное во вкладку Favourites.
+6. При нажатии на see all popular movie происходит перенаправление на страницу фильмов с наивысшим рейтингом на кинописке за все время.
+7. В папке api есть несколько токенов для запросов.
+8. Во вкладке Tranding,фильмы с наивысшим рейтингом за 2022-2024 год
+9. На главной странице 3 раздела по 10 фильмов : Фильмы с наивысшим рейтингом, фильмы которые выйдут в 2024-2025 году и ТОП-10 за месяц (фильмы/сериалы)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Стек технологий:
 
-In the project directory, you can run:
+## TypeScript   <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TS" alt="TS" width="20" height="20"/>&nbsp;
 
-### `npm start`
+TypeScript - это язык программирования с открытым исходным кодом, который представляет собой строгий надмножество JavaScript, добавляющий статическую типизацию к языку. Он улучшает разработку и поддержку кода, делая его более надежным и понятным.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## React <img src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/react/react-original-wordmark.svg" title="React" width="20" height="20"/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+React - это библиотека JavaScript для создания пользовательских интерфейсов. Она позволяет разрабатывать компоненты UI, которые могут быть повторно использованы в различных частях приложения, что делает код более модульным и поддерживаемым.
 
-### `npm test`
+## Redux   <img src="https://github.com/devicons/devicon/blob/master/icons/redux/redux-original.svg" title="Redux" alt="Redux " width="20" height="20"/>&nbsp;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Redux - это инструмент управления состоянием для JavaScript-приложений, основанный на шаблоне проектирования Flux. Он помогает организовать состояние приложения и управлять его изменениями, обеспечивая однонаправленный поток данных.
 
-### `npm run build`
+## Дальнейшие планы по развитию
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Создание сервер на Node.js и разработка собственных API**: Я планирую создать серверную часть приложения на Node.js для обработки запросов и предоставления данных моему клиентскому приложению.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Страница авторизации и регистрации**: Я намерен добавить страницу для аутентификации пользователей и их регистрации. Это позволит мне обеспечить безопасный доступ к приложению и создать учетные записи для пользователей.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Изменение страницы Home**: Я планирую улучшить пользовательский опыт на главной странице, добавив новые функции и улучшенный дизайн. Это сделает мое приложение более привлекательным и удобным для использования.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Написание тестов**: Я собираюсь написать тесты для проверки функциональности и надежности моего приложения. Это поможет мне выявлять и исправлять ошибки на ранних этапах разработки и обеспечит стабильную работу приложения.
