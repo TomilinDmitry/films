@@ -38,7 +38,7 @@ export const MovieInfo = () => {
     };
 
     fetchData();
-  }, [dispatch,params.id]);
+  }, [dispatch, params.id]);
   const director = movie?.persons?.filter(
     (person) => person.profession === "режиссеры",
   );
@@ -88,13 +88,33 @@ export const MovieInfo = () => {
             </div>
             <div className={style.info}>
               <span className={style.rating}>
-                {movie?.rating?.kp.toFixed(1)}
+                {movie?.rating?.kp !== 0
+                  ? movie?.rating?.kp.toFixed(1)
+                  : ""}
               </span>
-              <span className={style.filmDescription}>
+              <p className={style.filmDescription}>
                 {movie?.year}, {movie?.genres?.[0].name},
-                {movie?.countries?.[0].name},
-                {formatTime(movie?.movieLength)}, {movie?.ageRating}+
-              </span>
+                {movie?.countries?.[0].name},{" "}
+                {movie?.seasonsInfo?.[0]
+                  ? `${movie.seasonsInfo.length} seasons  ${movie.seasonsInfo[0].episodesCount} episodes`
+                  : movie?.seriesLength
+                  ? `в сред. ${movie.seriesLength} мин. `
+                  : movie?.movieLength !== 0
+                  ? `${formatTime(movie?.movieLength)}`
+                  : ""}
+                <span
+                  className={`${
+                    movie?.ageRating === 18
+                      ? style.red
+                      : movie?.ageRating === 16
+                      ? style.yellow
+                      : movie?.ageRating! < 16
+                      ? style.green
+                      : style.gray
+                  }`}>
+                  {movie?.ageRating ? `${movie?.ageRating}+` : ""}
+                </span>
+              </p>
             </div>
             {movie?.top250 ? (
               <div className={style.topPostionBlock}>

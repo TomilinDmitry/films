@@ -8,8 +8,8 @@ export const PopularMainBlock = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPopularMovie());
-  },[dispatch]);
-  const { popularMovie } = useSelector((store) => store.main);
+  }, [dispatch]);
+  const { popularMovie } = useSelector((store) => store.popular);
   return (
     <div>
       <section className={style.title}>

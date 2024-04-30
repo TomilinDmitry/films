@@ -11,6 +11,14 @@ export type TMovie = {
   rating?: {
     kp: number;
   };
+  totalSeriesLength?: number;
+  seriesLength?: number;
+  seasonsInfo?: [
+    {
+      number: number;
+      episodesCount: number;
+    },
+  ];
   votes?: {
     kp: number;
   };
@@ -64,18 +72,34 @@ export type TApiResponseOneMovie = {
 
 export type TMainSlice = {
   loading: boolean;
-  error: string | null;
+  error?: string | null;
   headerMovie: TMovie[] | [];
-  popularMovie: TMovie[] | [];
-  allPopularMovie: TMovie[] | [];
-  cinemaSoonMovie: TMovie[] | [];
-  trandMovie: TMovie[] | [];
-  topMovie: TMovie[] | [];
   randomMovie: TMovie | null;
   favouriteMovie: TMovie[];
   infoMovie: TMovie | null;
   active: Record<number, boolean>;
   viewed: boolean;
+};
+export type TPopularSlice = {
+  loading: boolean;
+  error?: string | null;
+  popularMovie: TMovie[] | [];
+  allPopularMovie: TMovie[] | [];
+};
+export type TTrandSlice = {
+  loading: boolean;
+  error?: string | null;
+  trandMovie: TMovie[] | [];
+};
+export type TTopSlice = {
+  loading: boolean;
+  error?: string | null;
+  topMovie: TMovie[] | [];
+};
+export type TSoonSlice = {
+  loading: boolean;
+  error?: string | null;
+  cinemaSoonMovie: TMovie[] | [];
 };
 export type TSliceResponse = {
   docs: TMovie[];

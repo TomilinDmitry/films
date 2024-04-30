@@ -1,14 +1,14 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import style from "./index.module.scss";
 import { MovieCard } from "../movieCard";
 import { useDispatch, useSelector } from "../../app/types/hooks";
 import { getTopMovie } from "../../app/api";
 export const TopBlock = () => {
   const dispatch = useDispatch();
-  const { topMovie } = useSelector((store) => store.main);
+  const { topMovie } = useSelector((store) => store.top);
 
   useEffect(() => {
-    dispatch(getTopMovie())
+    dispatch(getTopMovie());
   }, [dispatch]);
 
   return (

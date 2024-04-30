@@ -9,7 +9,7 @@ import {
   trandingMovie,
 } from "./vars";
 
-export const apiKey = "TN22RSS-CXH48N4-HB1M47H-5SRF18D";
+export const apiKey = "5MJ05CQ-E6VMB9V-QFJ0DTC-78X7Z6R";
 // "WKE87JD-4D441GJ-MPRMZ0Q-6DC5G21"
 //  "TN22RSS-CXH48N4-HB1M47H-5SRF18D";
 // 5MJ05CQ-E6VMB9V-QFJ0DTC-78X7Z6R
@@ -22,8 +22,12 @@ type TServerResponse<T> = {
   docs: T;
 } & T;
 
-export const checkResponse = <T,>(res: Response): Promise<T> => {
-  return res.ok ? res.json() : Promise.reject(`Ошибка:${res.status}`);
+export const checkResponse = <T>(res: Response): Promise<T> => {
+  if (res.ok) {
+    return res.json();
+  } else {
+    return res.json().then((error) => Promise.reject(error.message));
+  }
 };
 
 export const getPopularMovie = createAsyncThunk(

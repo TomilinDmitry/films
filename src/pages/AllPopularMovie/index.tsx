@@ -1,11 +1,11 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import { MovieCard } from "../../entities/movieCard";
 import { getAllPopularMovie } from "../../app/api";
 import { useDispatch, useSelector } from "../../app/types/hooks";
 export const AllPopularMovie = () => {
   const dispatch = useDispatch();
-  const { allPopularMovie } = useSelector((store) => store.main);
+  const { allPopularMovie } = useSelector((store) => store.popular);
   useEffect(() => {
     dispatch(getAllPopularMovie());
   }, [dispatch]);

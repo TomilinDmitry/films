@@ -1,23 +1,22 @@
 .title {
-    display: flex;
-    justify-content: space-between;
-    max-width: 95%;
-    align-items: center;
-    padding: 0px 24px;
-    h1 {
-      font-size: 48px;
-    }
-    a {
-      font-size: 24px;
-    }
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
+  align-items: center;
+  padding: 0px 24px;
+  h1 {
+    font-size: 48px;
   }
-  .cardBlock {
-    display: flex;
-    max-height: 100%;
-    padding-left: 24px;
-    margin: 24px 0px;
-  
-    gap: 50px;
-    flex-wrap: wrap;
+  a {
+    font-size: 24px;
   }
-  
+}
+.cardBlock {
+  display: flex;
+  max-height: 100%;
+  padding-left: 24px;
+  margin: 24px 0px;
+
+  gap: 50px;
+  flex-wrap: wrap;
+}

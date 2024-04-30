@@ -8,6 +8,22 @@
     flex-direction: column;
     padding-left: 24px;
     gap: 24px;
+    .loading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-left: 24px;
+      font-size: 48px;
+      text-align: center;
+      width: 100%;
+
+      gap: 12px;
+    }
+    .error {
+      @extend .loading;
+      color: rgb(255, 160, 160);
+    }
     .cardBlock {
       display: flex;
       max-height: 100%;

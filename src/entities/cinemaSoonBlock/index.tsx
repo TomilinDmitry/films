@@ -1,21 +1,20 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import style from "./index.module.scss";
 import { MovieCard } from "../movieCard";
 import { useDispatch, useSelector } from "../../app/types/hooks";
 import { getCinemaSoon } from "../../app/api";
-
 export const CinemaSoonBlock = () => {
-
-  const dispatch = useDispatch()
-  const {cinemaSoonMovie} = useSelector(store=>store.main)
+  const dispatch = useDispatch();
+  const { cinemaSoonMovie } = useSelector((store) => store.soon);
   useEffect(() => {
-    dispatch(getCinemaSoon())
+    dispatch(getCinemaSoon());
   }, [dispatch]);
   return (
     <div>
       <section className={style.title}>
         <h1>Сinema soon</h1>
       </section>
+
       <div className={style.cardBlock}>
         {cinemaSoonMovie.map((movie, index) => (
           <MovieCard
